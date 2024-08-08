@@ -1,0 +1,12 @@
+<h1>RU</h1>
+<p>Это плагин-API для античита Vulcan, можете посмотреть его исходники
+Что он делает?
+Этот плагин фиксит ложные срабатывания или улучшает проверки Vulcan, при использовании моей платной конфигурации: https://spigotmc.ru/resources/gotovaja-nastroennaja-konfiguracija-antichita-vulcan-na-russkom.1851/
+На данный момент только фиксит ложное срабатывание Killaura K
+Подойдет для серверов 1.12.2 - последняя версия, на Paper или его форках</p>
+<h1>EN</h1>
+<p>This is an API plugin for Vulcan anti-cheat, you can view its sources
+What is he doing?
+This plugin fixes false positives or improves Vulcan checks when using my paid configuration: https://spigotmc.ru/resources/gotovaja-nastroennaja-konfiguracija-antichita-vulcan-na-russkom.1851/
+At the moment, it only fixes a false positive Killaura K
+Suitable for servers 1.12.2 - the latest version, on Paper or its fork</p>
