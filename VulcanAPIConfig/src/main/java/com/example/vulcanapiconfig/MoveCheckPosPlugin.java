@@ -62,12 +62,14 @@ public class MoveCheckPosPlugin extends JavaPlugin {
         // Проверяем, движется ли целевой игрок
         if (target.isSneaking() || target.isJumping() || target.isSprinting()) {
             // Наказание игрока
-            String punishment1 = configManager.getPunishment();
-            String message1 = configManager.getPunishment1();
+            String punishment2 = configManager.getPunishment();
+            String punishment1 = configManager.getPunishment2();
+            String message2 = configManager.getPunishment1();
+            String message1 = configManager.getPunishment3();
+            Bukkit.dispatchCommand((ConsoleCommandSender) sender, punishment2 + " " + target.getName() + " " + message2);
             Bukkit.dispatchCommand((ConsoleCommandSender) sender, punishment1 + " " + target.getName() + " " + message1);
-            target.setHealth(0);
-            String punishment = configManager.getPunishment2();
-            String message = configManager.getPunishment3();
+            String punishment = configManager.getPunishment4();
+            String message = configManager.getPunishment5();
 
             Bukkit.dispatchCommand((ConsoleCommandSender) sender, punishment + " " + target.getName() + " " + message);
         }

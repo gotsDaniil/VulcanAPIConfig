@@ -38,25 +38,25 @@ public class ConfigManager {
     private void setDefaults() {
         // Проверка и установка значений по умолчанию
         if (!config.contains("//")) {
-            config.set("//", "Укажите желаемую команду наказания. Эта команда будет выполнена до убийства игрока.");
+            config.set("//", "Оставьте наказание в punishment под всеми номерами. Оставьте ' ', чтобы убрать наказание");
+        }
+        if (!config.contains("punishment2")) {
+            config.set("punishment2", "thor");
+        }
+        if (!config.contains("/")) {
+            config.set("/", "Укажите время, если требуется, и укажите причину под всеми номерами message. Оставьте ' ', чтобы убрать причину");
+        }
+        if (!config.contains("message2")) {
+            config.set("message2", "&cAC Вы были кикнуты за подозрение в читах");
         }
         if (!config.contains("punishment1")) {
-            config.set("punishment1", "kick");
-        }
-        if (!config.contains("Описание")) {
-            config.set("Описание", "Укажите время, если требуется, и укажите причину.");
+            config.set("punishment1", "kill");
         }
         if (!config.contains("message1")) {
             config.set("message1", "&cAC Вы были кикнуты за подозрение в читах");
         }
-        if (!config.contains("/")) {
-            config.set("/", "Укажите вторую желаемую команду наказания.");
-        }
         if (!config.contains("punishment")) {
-            config.set("punishment", "kick");
-        }
-        if (!config.contains("Описание1")) {
-            config.set("Описание1", "Укажите время, если требуется, и укажите причину.");
+            config.set("punishment", "minecraft:kick");
         }
         if (!config.contains("message")) {
             config.set("message", "&cAC Вы были кикнуты за подозрение в читах");
@@ -66,18 +66,23 @@ public class ConfigManager {
 
     // Возвращаем значение наказания
     public String getPunishment() {
-        return config.getString("punishment1"); // Значение по умолчанию
+        return config.getString("punishment2"); // Значение по умолчанию
     }
     public String getPunishment1() {
-        return config.getString("message1"); // Значение по умолчанию
+        return config.getString("message2"); // Значение по умолчанию
     }
     public String getPunishment2() {
-        return config.getString("punishment"); // Значение по умолчанию
+        return config.getString("punishment1"); // Значение по умолчанию
     }
     public String getPunishment3() {
+        return config.getString("message1"); // Значение по умолчанию
+    }
+    public String getPunishment4() {
+        return config.getString("punishment"); // Значение по умолчанию
+    }
+    public String getPunishment5() {
         return config.getString("message"); // Значение по умолчанию
     }
-
     // Метод для сохранения конфигурации
     public void saveConfig() {
         try {
