@@ -1,0 +1,13 @@
+name: VulcanAPIConfig
+version: '${project.version}'
+main: com.example.vulcanapiconfig.MoveCheckPosPlugin
+api-version: '1.16'
+load: STARTUP
+depend: []
+commands:
+  movecheckpos:
+    description: Проверяет движение игрока
+    usage: /movecheckpos <игрок>
+  vulcanapiconfig:
+    description: Перзагружает плагин
+    usage: /<command> reload
